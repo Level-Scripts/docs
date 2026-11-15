@@ -1,4 +1,10 @@
 ---
+cover: ../.gitbook/assets/cover_getting_started.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
 description: Change the language of all Level Scripts at once, or edit any text.
 ---
 

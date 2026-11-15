@@ -1,0 +1,33 @@
+---
+cover: ../../.gitbook/assets/cover_lvl_drugsell.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+description: >-
+  Sell drugs to street NPCs, to delivery customers or through your own vending machine. Every sale gives XP.
+---
+
+# lvl\_drugsell
+
+[Get it on Tebex](https://level-scripts.tebex.io/package/drugsell) | [Discord](https://www.discord.gg/UKqwhpjczw)
+
+## Features
+
+* Street sales to NPCs
+* Delivery customers through a middleman
+* Player owned vending machines
+* Levels with a money bonus
+* Drug variants by metadata
+* Police minimum and dispatch hook
+
+## Requirements
+
+| Resource | |
+| --- | --- |
+| [lvl\_core](../../lvl_core/README.md) | required |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
+| Inventory | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended (drug variants and machine stock use item metadata) |
+| Framework | any supported by lvl\_core |

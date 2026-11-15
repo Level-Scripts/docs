@@ -1,4 +1,10 @@
 ---
+cover: ../.gitbook/assets/cover_getting_started.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
 description: How to download and start any Level Scripts resource.
 ---
 
@@ -8,7 +14,7 @@ description: How to download and start any Level Scripts resource.
 
 After the purchase the script is added to your [Cfx.re Portal](https://portal.cfx.re/assets/granted-assets) under **Granted Assets**. Download it there with the same account that owns your server key. Free scripts are claimed on [Tebex](https://level-scripts.tebex.io/) and appear in the same place.
 
-Download [lvl\_core](lvl_core.md) too. Every Level Scripts resource needs it.
+Download [lvl\_core](../lvl_core/README.md) too. Every Level Scripts resource needs it.
 
 {% hint style="warning" %}
 Do not rename the resource folders. The scripts find each other by name (`lvl_core`, `lvl_dealership`...).
@@ -20,7 +26,7 @@ These are needed by every script:
 
 * A server with **OneSync** turned on
 * [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)
-* [lvl\_core](lvl_core.md)
+* [lvl\_core](../lvl_core/README.md)
 * [oxmysql](https://github.com/overextended/oxmysql/releases/latest) for scripts that save data
 
 Extra requirements are listed on the page of each script.
@@ -73,7 +79,7 @@ lvl\_core also prints what it detected:
 [lvl_core] Framework: esx | Inventory: ox_inventory | Notify: ox_lib | Progress: ox_lib | Text UI: ox_lib | Target: ox_target
 ```
 
-If you see a **WARNING** or **ERROR** there, read [lvl\_core](lvl_core.md#auto-detection).
+If you see a **WARNING** or **ERROR** there, read [lvl\_core](../lvl_core/installation.md#auto-detection).
 
 ## 7. Admin permission
 

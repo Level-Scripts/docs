@@ -1,4 +1,10 @@
 ---
+cover: ../.gitbook/assets/cover_getting_started.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
 description: The most common problems and how to fix them.
 ---
 
@@ -17,7 +23,7 @@ Read the `[lvl_core]` line in the server console after start.
 * **WARNING**: lvl\_core found more than one option (for example two inventories) and took the first one. Set the right value in `lvl_core/config.lua`, the warning tells you which.
 * **ERROR**: the value in `lvl_core/config.lua` is not running or not supported. lvl\_core falls back to auto detection.
 
-Type `/lvlcore` in the server console to print the detection again. See [lvl\_core](lvl_core.md#auto-detection).
+Type `/lvlcore` in the server console to print the detection again. See [lvl\_core](../lvl_core/installation.md#auto-detection).
 
 ## Items do not work
 
