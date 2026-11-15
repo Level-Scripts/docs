@@ -1,7 +1,3 @@
----
-description: Documentation for every Level Scripts resource.
----
-
 # Welcome
 
 This is the documentation for every script from [Level Scripts](https://level-scripts.tebex.io/). Each page explains what the script does, how to install it, every config option, commands, items and how to change the texts.
