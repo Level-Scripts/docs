@@ -1,12 +1,34 @@
 ---
+description: >-
+  Sell drugs to street NPCs, to delivery customers or through your own vending
+  machine. Every sale gives XP.
+icon: capsule
 cover: ../../.gitbook/assets/cover_lvl_drugsell.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
-    size: full
-description: >-
-  Sell drugs to street NPCs, to delivery customers or through your own vending machine. Every sale gives XP.
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_drugsell
@@ -24,10 +46,10 @@ description: >-
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../../lvl_core/README.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| Inventory | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended (drug variants and machine stock use item metadata) |
-| Framework | any supported by lvl\_core |
+| Resource                                                           |                                                                                                                                               |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [lvl\_core](../../lvl_core/)                                       | required                                                                                                                                      |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)  | required                                                                                                                                      |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required                                                                                                                                      |
+| Inventory                                                          | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended (drug variants and machine stock use item metadata) |
+| Framework                                                          | any supported by lvl\_core                                                                                                                    |

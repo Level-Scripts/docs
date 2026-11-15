@@ -1,12 +1,6 @@
 # Table of contents
 
 * [Welcome](README.md)
-
-## Getting started
-
-* [Installation](getting-started/installation.md)
-* [Language](getting-started/language.md)
-* [Troubleshooting](getting-started/troubleshooting.md)
 * [lvl\_core](lvl_core/README.md)
   * [Installation](lvl_core/installation.md)
   * [Configuration](lvl_core/configuration.md)

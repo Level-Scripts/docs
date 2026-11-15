@@ -1,12 +1,34 @@
 ---
+description: >-
+  Player list with Discord avatars and roles, job counts and which illegal
+  activities are available right now.
+icon: clipboard
 cover: ../../.gitbook/assets/cover_lvl_scoreboard.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
-    size: full
-description: >-
-  Player list with Discord avatars and roles, job counts and which illegal activities are available right now.
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_scoreboard
@@ -24,8 +46,8 @@ description: >-
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../../lvl_core/README.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| ESX, QBCore, Qbox or standalone | detected automatically |
+| Resource                                                          |                        |
+| ----------------------------------------------------------------- | ---------------------- |
+| [lvl\_core](../../lvl_core/)                                      | required               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required               |
+| ESX, QBCore, Qbox or standalone                                   | detected automatically |

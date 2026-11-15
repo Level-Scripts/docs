@@ -3,7 +3,7 @@
 ## config.lua
 
 ```lua
-ServerName = 'Level RP',   -- notification title when a script has none
+ServerName = 'Level Scripts',   -- notification title when a script has none
 
 Locale = 'en',             -- language of ALL lvl scripts: 'en' or 'cs' (nil = from ox_lib)
 
@@ -124,6 +124,6 @@ Keep webhook URLs here, never in a `config.lua`. Players can download every `con
 
 ## Commands
 
-| Command | Who | What it does |
-| --- | --- | --- |
+| Command    | Who                    | What it does                   |
+| ---------- | ---------------------- | ------------------------------ |
 | `/lvlcore` | server console, admins | Prints what lvl\_core detected |

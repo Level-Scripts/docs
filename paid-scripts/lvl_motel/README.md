@@ -1,12 +1,34 @@
 ---
+description: >-
+  Rent a motel room at its door, share the key with friends and keep your things
+  in the room stash. Police can seal and breach rooms.
+icon: hotel
 cover: ../../.gitbook/assets/cover_lvl_motel.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
-    size: full
-description: >-
-  Rent a motel room at its door, share the key with friends and keep your things in the room stash. Police can seal and breach rooms.
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_motel
@@ -27,11 +49,11 @@ description: >-
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../../lvl_core/README.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stash) |
-| ESX, QBCore or Qbox | detected automatically |
-| illenium-appearance, qb-clothing or esx\_skin | optional, for the wardrobe |
+| Resource                                                                      |                            |
+| ----------------------------------------------------------------------------- | -------------------------- |
+| [lvl\_core](../../lvl_core/)                                                  | required                   |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                   |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required                   |
+| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stash)           |
+| ESX, QBCore or Qbox                                                           | detected automatically     |
+| illenium-appearance, qb-clothing or esx\_skin                                 | optional, for the wardrobe |

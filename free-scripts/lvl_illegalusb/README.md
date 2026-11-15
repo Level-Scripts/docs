@@ -1,12 +1,32 @@
 ---
+description: Hack a USB, fight the guards and crack the crate for loot.
+icon: usb-drive
 cover: ../../.gitbook/assets/cover_lvl_illegalusb.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
-    size: full
-description: >-
-  Hack a USB, fight the guards and crack the crate for loot.
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_illegalusb
@@ -23,10 +43,10 @@ description: >-
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../../lvl_core/README.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| A hacking minigame | default `mhacking`, change it in `client/editable.lua` |
-| A lockpick minigame | default `t3_lockpick`, change it in `Config.Lockpick` |
-| Framework | any supported by lvl\_core |
+| Resource                                                          |                                                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------ |
+| [lvl\_core](../../lvl_core/)                                      | required                                               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                                               |
+| A hacking minigame                                                | default `mhacking`, change it in `client/editable.lua` |
+| A lockpick minigame                                               | default `t3_lockpick`, change it in `Config.Lockpick`  |
+| Framework                                                         | any supported by lvl\_core                             |
