@@ -1,13 +1,3 @@
----
-cover: .gitbook/assets/cover_welcome.png
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-description: Install, configure and use every Level Scripts resource.
----
-
 # Welcome
 
 Documentation for every [Level Scripts](https://level-scripts.tebex.io/) resource.
