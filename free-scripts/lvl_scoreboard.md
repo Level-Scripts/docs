@@ -2,6 +2,32 @@
 description: >-
   Player list with Discord avatars, names and role icons, job counts, ping and
   illegal activity availability by police count.
+icon: clipboard
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_scoreboard
@@ -25,11 +51,11 @@ A clean scoreboard on the side of the screen. It shows every player with their D
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| ESX, QBCore, Qbox or standalone | detected automatically |
+| Resource                                                          |                        |
+| ----------------------------------------------------------------- | ---------------------- |
+| [lvl\_core](../lvl_core.md)                                       | required               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required               |
+| ESX, QBCore, Qbox or standalone                                   | detected automatically |
 
 ## Installation
 
@@ -50,7 +76,7 @@ ensure lvl_scoreboard
 set lvl_scoreboard_token "YOUR_BOT_TOKEN"
 ```
 
-   4. Put your Discord server (guild) ID into `config_server.lua`.
+4. Put your Discord server (guild) ID into `config_server.lua`.
 
 {% hint style="danger" %}
 Never put the bot token into `config.lua`. Players download that file. Use the convar or `config_server.lua`.
@@ -58,10 +84,10 @@ Never put the bot token into `config.lua`. Players download that file. Use the c
 
 ## Commands and controls
 
-| Command / key | What it does |
-| --- | --- |
-| `DELETE` | Opens and closes the scoreboard. Players can change the key in FiveM key bindings. |
-| `/scoreboard` | Same as the key |
+| Command / key | What it does                                                                       |
+| ------------- | ---------------------------------------------------------------------------------- |
+| `DELETE`      | Opens and closes the scoreboard. Players can change the key in FiveM key bindings. |
+| `/scoreboard` | Same as the key                                                                    |
 
 ## Configuration
 

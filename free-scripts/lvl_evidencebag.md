@@ -2,6 +2,32 @@
 description: >-
   Police seal a suspect's items into a labeled evidence bag and give them back
   later. Every bag is its own stash.
+icon: sack
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_evidencebag
@@ -23,12 +49,12 @@ An officer uses an empty evidence bag on a nearby player and all their items go 
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
+| Resource                                                                      |                                     |
+| ----------------------------------------------------------------------------- | ----------------------------------- |
+| [lvl\_core](../lvl_core.md)                                                   | required                            |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                            |
 | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stashes and item buttons) |
-| Framework | any supported by lvl\_core |
+| Framework                                                                     | any supported by lvl\_core          |
 
 ## Installation
 
@@ -77,12 +103,12 @@ ensure lvl_evidencebag
 
 ## How to use
 
-| Action | How |
-| --- | --- |
+| Action     | How                                                                               |
+| ---------- | --------------------------------------------------------------------------------- |
 | Confiscate | Use an **empty bag**, pick the nearby player. Their items go into a new full bag. |
-| Open | Use the **full bag**. It opens as a stash. |
-| Label | Right click the full bag, **Set label** (3 to 30 characters). |
-| Give back | Right click the full bag, **Unpack**, pick the nearby player. |
+| Open       | Use the **full bag**. It opens as a stash.                                        |
+| Label      | Right click the full bag, **Set label** (3 to 30 characters).                     |
+| Give back  | Right click the full bag, **Unpack**, pick the nearby player.                     |
 
 ## Configuration
 
@@ -112,10 +138,10 @@ Config.ProhibitedItems = {
 
 ## Items
 
-| Item | Use |
-| --- | --- |
-| `evidence_bag_empty` | Confiscate the items of a nearby player |
-| `evidence_bag_full` | The sealed bag with the items, label and owner |
+| Item                 | Use                                            |
+| -------------------- | ---------------------------------------------- |
+| `evidence_bag_empty` | Confiscate the items of a nearby player        |
+| `evidence_bag_full`  | The sealed bag with the items, label and owner |
 
 ## Language
 

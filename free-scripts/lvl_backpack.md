@@ -2,6 +2,32 @@
 description: >-
   Bags from the clothing menu add inventory slots and weight. Take the bag off
   and the inventory gets smaller again.
+icon: backpack
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_backpack
@@ -22,12 +48,12 @@ The bag a player wears decides how much they can carry. Put on a backpack in the
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| An inventory that supports changing slots and weight | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended |
-| Framework | any supported by lvl\_core |
+| Resource                                                          |                                                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [lvl\_core](../lvl_core.md)                                       | required                                                                                  |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                                                                                  |
+| An inventory that supports changing slots and weight              | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended |
+| Framework                                                         | any supported by lvl\_core                                                                |
 
 ## Installation
 
@@ -64,12 +90,12 @@ Config.ClothesBackpacks = {
 }
 ```
 
-| Field | Meaning |
-| --- | --- |
+| Field       | Meaning                                                |
+| ----------- | ------------------------------------------------------ |
 | `component` | Clothing slot: `5` = bags, `4` = legs, `11` = torso... |
-| `drawable` | Number of the clothing piece in that slot |
-| `slots` | Slots added |
-| `weight` | Grams added |
+| `drawable`  | Number of the clothing piece in that slot              |
+| `slots`     | Slots added                                            |
+| `weight`    | Grams added                                            |
 
 {% hint style="info" %}
 Set `DefaultInventory` to the same size your inventory uses for players (for ox\_inventory `inventory:slots` and `inventory:weight`), otherwise players without a bag get a different size.

@@ -1,7 +1,33 @@
 ---
 description: >-
-  Police fingerprint scanner. The officer scans a player and sees name, date
-  of birth, gender and BOLO status on a handheld device.
+  Police fingerprint scanner. The officer scans a player and sees name, date of
+  birth, gender and BOLO status on a handheld device.
+icon: fingerprint
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_fingerprint
@@ -24,12 +50,12 @@ An officer opens the scanner on a handheld device and requests a scan from the p
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| ox\_target or qb-target | only for `InteractMethod = 'target'` |
-| Framework | any supported by lvl\_core |
+| Resource                                                          |                                      |
+| ----------------------------------------------------------------- | ------------------------------------ |
+| [lvl\_core](../lvl_core.md)                                       | required                             |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                             |
+| ox\_target or qb-target                                           | only for `InteractMethod = 'target'` |
+| Framework                                                         | any supported by lvl\_core           |
 
 ## Installation
 
@@ -56,11 +82,11 @@ ensure lvl_fingerprint
 
 ## How to use
 
-| Method | How |
-| --- | --- |
-| `target` | Target a player, **Scan** |
-| `item` | Use the scanner item in front of a player |
-| `command` | Type `/fingerprint` in front of a player |
+| Method    | How                                       |
+| --------- | ----------------------------------------- |
+| `target`  | Target a player, **Scan**                 |
+| `item`    | Use the scanner item in front of a player |
+| `command` | Type `/fingerprint` in front of a player  |
 
 The scanned player sees the scanner and holds the button until the scan is done. The officer then sees the result and it is saved in the history.
 

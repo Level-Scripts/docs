@@ -2,6 +2,32 @@
 description: >-
   Motel rooms with rent, shared keys with permissions, private stash, wardrobe,
   room tours and police raids.
+icon: hotel
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_motel
@@ -28,14 +54,14 @@ Players rent a motel room at its door, pay for days in advance and get a private
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stash) |
-| ESX, QBCore or Qbox | detected automatically |
-| illenium-appearance, qb-clothing or esx\_skin | optional, for the wardrobe |
+| Resource                                                                      |                            |
+| ----------------------------------------------------------------------------- | -------------------------- |
+| [lvl\_core](../lvl_core.md)                                                   | required                   |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                   |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required                   |
+| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stash)           |
+| ESX, QBCore or Qbox                                                           | detected automatically     |
+| illenium-appearance, qb-clothing or esx\_skin                                 | optional, for the wardrobe |
 
 ## Installation
 
@@ -65,11 +91,11 @@ ensure lvl_motel
 
 ## How it works
 
-| Who | At the door |
-| --- | --- |
-| Anyone | Rent a free room, take a tour |
-| Tenant and key holders | Enter, lock, unlock, extend rent, manage the room |
-| Police | Open police actions: seal, remove seal, breach the door |
+| Who                    | At the door                                             |
+| ---------------------- | ------------------------------------------------------- |
+| Anyone                 | Rent a free room, take a tour                           |
+| Tenant and key holders | Enter, lock, unlock, extend rent, manage the room       |
+| Police                 | Open police actions: seal, remove seal, breach the door |
 
 Inside the room are the stash and the wardrobe. A key holder only sees what the tenant allowed. A key holder can only give permissions they have themselves.
 
@@ -183,18 +209,18 @@ Add more interiors here and use their key in `interior` of a room.
 
 ## Items
 
-| Item | Use |
-| --- | --- |
+| Item         | Use                                                            |
+| ------------ | -------------------------------------------------------------- |
 | `police_ram` | Police breach a locked door. Name set in `Config.ItemForOpen`. |
 
 ## Database
 
 Created automatically. `INSTALL/lvl_motel.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_motel_rooms` | Rented rooms, tenant, rent end, lock and seal |
-| `lvl_motel_keys` | Key holders and their permissions |
+| Table              | Content                                       |
+| ------------------ | --------------------------------------------- |
+| `lvl_motel_rooms`  | Rented rooms, tenant, rent end, lock and seal |
+| `lvl_motel_keys`   | Key holders and their permissions             |
 | `lvl_motel_inside` | Players who were inside a room when they left |
 
 The old tables `motel`, `motel_key` and `motel_inside` from v1 are copied once and can be deleted after that.

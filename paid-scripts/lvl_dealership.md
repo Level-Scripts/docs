@@ -2,6 +2,33 @@
 description: >-
   Car, boat and air dealerships with showroom, test drives, financing, used car
   lot, company management, stock delivery trucks and an in-game admin panel.
+icon: car
+cover: ../.gitbook/assets/nahledak dealership.png
+coverY: -348
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_dealership
@@ -34,14 +61,14 @@ A complete dealership system. Players browse the catalog on a tablet, test drive
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| ESX, QBCore or Qbox | detected automatically |
-| ox\_target or qb-target | optional, text UI prompts without it |
-| ox\_inventory | optional, for trunk info and voucher items |
+| Resource                                                           |                                            |
+| ------------------------------------------------------------------ | ------------------------------------------ |
+| [lvl\_core](../lvl_core.md)                                        | required                                   |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)  | required                                   |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required                                   |
+| ESX, QBCore or Qbox                                                | detected automatically                     |
+| ox\_target or qb-target                                            | optional, text UI prompts without it       |
+| ox\_inventory                                                      | optional, for trunk info and voucher items |
 
 ## Installation
 
@@ -65,7 +92,7 @@ ensure lvl_dealership
 },
 ```
 
-6. Connect your car keys and fuel in `Config.OnVehicleSpawned` (see [Hooks](#hooks)).
+6. Connect your car keys and fuel in `Config.OnVehicleSpawned` (see [Hooks](lvl_dealership.md#hooks)).
 
 {% hint style="info" %}
 Coming from v1? Data from the old tables (vehicles, categories, showroom, codes, settings) is copied on the first start. Nothing is deleted.
@@ -73,31 +100,31 @@ Coming from v1? Data from the old tables (vehicles, categories, showroom, codes,
 
 ## Starter dealerships
 
-| ID | Name | Type | Vehicles |
-| --- | --- | --- | --- |
-| 1 | Premium Deluxe Motorsport | Owned, job `pdm`, stock delivery | cars |
-| 2 | Boat Shop | Self-service, needs license `boat` | boats |
-| 3 | Air Shop | Self-service, needs license `aircraft` | aircraft |
-| 4 | Bike Shop | Self-service | bikes |
-| 5 | Car Bazaar | Used car lot, job `carbazaar` | used cars |
+| ID | Name                      | Type                                   | Vehicles  |
+| -- | ------------------------- | -------------------------------------- | --------- |
+| 1  | Premium Deluxe Motorsport | Owned, job `pdm`, stock delivery       | cars      |
+| 2  | Boat Shop                 | Self-service, needs license `boat`     | boats     |
+| 3  | Air Shop                  | Self-service, needs license `aircraft` | aircraft  |
+| 4  | Bike Shop                 | Self-service                           | bikes     |
+| 5  | Car Bazaar                | Used car lot, job `carbazaar`          | used cars |
 
 After the first start `server/starter.lua` is not used anymore. Create, edit and delete dealerships in `/dealeradmin`. To start over from the starter list, delete all rows of `lvl_dealership_locations` and restart.
 
 ## Dealership types
 
-| Type | How it works |
-| --- | --- |
-| `self-service` | A shop without employees. Players buy directly from the catalog. Stock is optional. |
-| `owned` | A company with a job. Employees sell, the boss manages money, staff and stock. Sales go to the company account. |
-| `bazaar` | Used car lot. Employees buy cars from players in the intake zone, then sell them with the same plate and tuning. |
+| Type           | How it works                                                                                                     |
+| -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `self-service` | A shop without employees. Players buy directly from the catalog. Stock is optional.                              |
+| `owned`        | A company with a job. Employees sell, the boss manages money, staff and stock. Sales go to the company account.  |
+| `bazaar`       | Used car lot. Employees buy cars from players in the intake zone, then sell them with the same plate and tuning. |
 
 ## Commands and controls
 
-| Command / key | Who | What it does |
-| --- | --- | --- |
-| `/dealeradmin` | admins | Opens the admin panel (name set in `Config.AdminCommand`) |
-| `G` | test driver | Ends the test drive early (`Config.TestDrive.endKey`) |
-| `E` / `Backspace` / arrows / `Shift` | staff | Confirm, cancel, rotate and fine rotate when placing a showroom car (`Config.PlaceKeys`) |
+| Command / key                        | Who         | What it does                                                                             |
+| ------------------------------------ | ----------- | ---------------------------------------------------------------------------------------- |
+| `/dealeradmin`                       | admins      | Opens the admin panel (name set in `Config.AdminCommand`)                                |
+| `G`                                  | test driver | Ends the test drive early (`Config.TestDrive.endKey`)                                    |
+| `E` / `Backspace` / arrows / `Shift` | staff       | Confirm, cancel, rotate and fine rotate when placing a showroom car (`Config.PlaceKeys`) |
 
 Admins are players in `Config.AdminGroups` or with the ACE permission `lvl_dealership.admin`:
 
@@ -109,17 +136,17 @@ add_ace group.admin lvl_dealership.admin allow
 
 `/dealeradmin` opens one panel for everything. Pick a dealership first, then:
 
-| Page | What you can do |
-| --- | --- |
-| Overview | Sales today and in 7 days, company money, open loans |
-| Settings | Name, type, job, positions (ped, spawn, boss laptop, sell point, test drive routes, delivery), blip, license, currency. Positions are taken from where you stand. |
-| Catalog | Add, edit and delete cars and categories, price, purchase price, stock, change all prices by %, copy the catalog to another dealership |
-| Orders | See open stock orders, complete or cancel them (the company gets a refund for cars not delivered) |
-| Loans | Search loans, postpone a payment, forgive the rest, repossess the car |
-| Sales | Sales log with search |
-| Discount codes | Codes of the picked dealership |
-| Webhooks | Discord webhook per dealership and per event, with a test button |
-| Tools | Give a car to a player, trailer slot preview, reload showroom |
+| Page           | What you can do                                                                                                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overview       | Sales today and in 7 days, company money, open loans                                                                                                              |
+| Settings       | Name, type, job, positions (ped, spawn, boss laptop, sell point, test drive routes, delivery), blip, license, currency. Positions are taken from where you stand. |
+| Catalog        | Add, edit and delete cars and categories, price, purchase price, stock, change all prices by %, copy the catalog to another dealership                            |
+| Orders         | See open stock orders, complete or cancel them (the company gets a refund for cars not delivered)                                                                 |
+| Loans          | Search loans, postpone a payment, forgive the rest, repossess the car                                                                                             |
+| Sales          | Sales log with search                                                                                                                                             |
+| Discount codes | Codes of the picked dealership                                                                                                                                    |
+| Webhooks       | Discord webhook per dealership and per event, with a test button                                                                                                  |
+| Tools          | Give a car to a player, trailer slot preview, reload showroom                                                                                                     |
 
 Every change is saved to the database and applied at once.
 
@@ -184,12 +211,12 @@ Config.Colors = {
 }
 ```
 
-| Mode | Result |
-| --- | --- |
-| `rgb` | Full colour picker |
-| `palette` | Only your colours from `palette` |
-| `gta` | GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet) |
-| `false` | No colour step, the car keeps its default colour |
+| Mode      | Result                                                                          |
+| --------- | ------------------------------------------------------------------------------- |
+| `rgb`     | Full colour picker                                                              |
+| `palette` | Only your colours from `palette`                                                |
+| `gta`     | GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet) |
+| `false`   | No colour step, the car keeps its default colour                                |
 
 ### Extras
 
@@ -312,27 +339,27 @@ Config.OnTestDriveEnd = function(vehicle, plate, model) end
 
 ## Items
 
-| Item | Needed | Use |
-| --- | --- | --- |
+| Item            | Needed   | Use                                                                                                   |
+| --------------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | `discount_code` | optional | Voucher with a discount code. Staff give it from the tablet, the code fills in when the buyer has it. |
 
 ## Database
 
 Created automatically. `INSTALL/lvl_dealership.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_dealership_locations` | Dealerships |
-| `lvl_dealership_vehicles` | Catalog |
-| `lvl_dealership_categories` | Categories |
-| `lvl_dealership_showroom` | Showroom cars |
-| `lvl_dealership_codes` | Discount codes |
-| `lvl_dealership_finance` | Loans |
-| `lvl_dealership_sales` | Sales log |
-| `lvl_dealership_orders` | Stock orders |
-| `lvl_dealership_transactions` | Company transactions |
-| `lvl_dealership_settings` | Name and logo per dealership |
-| `lvl_dealership_webhooks` | Webhooks per dealership and event |
+| Table                         | Content                           |
+| ----------------------------- | --------------------------------- |
+| `lvl_dealership_locations`    | Dealerships                       |
+| `lvl_dealership_vehicles`     | Catalog                           |
+| `lvl_dealership_categories`   | Categories                        |
+| `lvl_dealership_showroom`     | Showroom cars                     |
+| `lvl_dealership_codes`        | Discount codes                    |
+| `lvl_dealership_finance`      | Loans                             |
+| `lvl_dealership_sales`        | Sales log                         |
+| `lvl_dealership_orders`       | Stock orders                      |
+| `lvl_dealership_transactions` | Company transactions              |
+| `lvl_dealership_settings`     | Name and logo per dealership      |
+| `lvl_dealership_webhooks`     | Webhooks per dealership and event |
 
 Bought vehicles are saved to the vehicles table of your framework (`owned_vehicles` on ESX, `player_vehicles` on QBCore and Qbox).
 

@@ -2,6 +2,32 @@
 description: >-
   Sell drugs to street NPCs, to delivery customers found by a middleman and
   through player owned vending machines. Every sale gives XP and levels.
+icon: capsule
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_drugsell
@@ -25,13 +51,13 @@ Three ways to sell drugs, each one can be switched off. Sell on the street to NP
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| Inventory | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended (drug variants and machine stock use item metadata) |
-| Framework | any supported by lvl\_core |
+| Resource                                                           |                                                                                                                                               |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [lvl\_core](../lvl_core.md)                                        | required                                                                                                                                      |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)  | required                                                                                                                                      |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required                                                                                                                                      |
+| Inventory                                                          | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended (drug variants and machine stock use item metadata) |
+| Framework                                                          | any supported by lvl\_core                                                                                                                    |
 
 ## Installation
 
@@ -75,12 +101,12 @@ Go to **James** (the middleman), choose **Start looking**. After a while he find
 
 Use the `drug_machine` item and place it:
 
-| Key | Action |
-| --- | --- |
-| Arrows | Move |
+| Key         | Action |
+| ----------- | ------ |
+| Arrows      | Move   |
 | Mouse wheel | Rotate |
-| `E` | Place |
-| `X` | Cancel |
+| `E`         | Place  |
+| `X`         | Cancel |
 
 The owner manages the machine (restock, change names and prices, withdraw money, pick it up). Other players buy from it with cash or bank. Picking up the machine returns the drugs, the money and the machine item.
 
@@ -197,18 +223,18 @@ Config.Webhook = ""   -- Discord webhook for logs, "" = off
 
 ## Items
 
-| Item | Use |
-| --- | --- |
-| `drug_machine` | Places a vending machine |
+| Item            | Use                          |
+| --------------- | ---------------------------- |
+| `drug_machine`  | Places a vending machine     |
 | your drug items | Everything in `Config.Drugs` |
 
 ## Database
 
 Created automatically. `INSTALL/lvl_drugsell.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_drugsell_levels` | XP and level per character |
+| Table                   | Content                                 |
+| ----------------------- | --------------------------------------- |
+| `lvl_drugsell_levels`   | XP and level per character              |
 | `lvl_drugsell_machines` | Placed machines, owner, stock and money |
 
 ## Language

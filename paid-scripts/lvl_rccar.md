@@ -2,6 +2,32 @@
 description: >-
   Remote controlled cars with a camera, microphone, antenna and swappable
   batteries. Every car is an item that keeps its name, parts and charge.
+icon: gamepad-modern
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_rccar
@@ -27,14 +53,14 @@ Players place an RC car from their inventory and drive it with a controller. Ins
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required |
-| ox\_target or qb-target | required |
-| ESX, QBCore or Qbox | detected automatically |
+| Resource                                                                      |                        |
+| ----------------------------------------------------------------------------- | ---------------------- |
+| [lvl\_core](../lvl_core.md)                                                   | required               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required               |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required               |
+| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required               |
+| ox\_target or qb-target                                                       | required               |
+| ESX, QBCore or Qbox                                                           | detected automatically |
 
 ## Installation
 
@@ -85,12 +111,12 @@ ensure lvl_rccar
 
 ### Controls
 
-| Key | Action |
-| --- | --- |
-| Arrows | Drive and steer |
-| `G` | Camera on or off |
-| `H` | Next camera mode |
-| `E` | Disconnect |
+| Key    | Action           |
+| ------ | ---------------- |
+| Arrows | Drive and steer  |
+| `G`    | Camera on or off |
+| `H`    | Next camera mode |
+| `E`    | Disconnect       |
 
 Leaving the signal range or an empty battery disconnects you.
 
@@ -162,30 +188,30 @@ Set `Config.Shop = false` to sell the items in another shop.
 
 ## Items
 
-| Item | Use |
-| --- | --- |
-| `rcbandito` | The RC car, keeps its name, parts and battery in the item |
-| `controller` | Opens the list of your placed cars |
-| `rc_camera` | Installs the camera |
-| `rc_microphone` | Installs the microphone |
-| `rc_antenna` | Installs the antenna |
-| `rc_battery` | Swaps the battery, keeps its own charge |
+| Item            | Use                                                       |
+| --------------- | --------------------------------------------------------- |
+| `rcbandito`     | The RC car, keeps its name, parts and battery in the item |
+| `controller`    | Opens the list of your placed cars                        |
+| `rc_camera`     | Installs the camera                                       |
+| `rc_microphone` | Installs the microphone                                   |
+| `rc_antenna`    | Installs the antenna                                      |
+| `rc_battery`    | Swaps the battery, keeps its own charge                   |
 
 ## Exports
 
 Client exports used by the items:
 
-| Export | |
-| --- | --- |
+| Export                                     |                                      |
+| ------------------------------------------ | ------------------------------------ |
 | `exports.lvl_rccar:placeRCcar(data, slot)` | Places the RC car from the used item |
-| `exports.lvl_rccar:useController()` | Opens the controller |
+| `exports.lvl_rccar:useController()`        | Opens the controller                 |
 
 ## Database
 
 Created automatically. `INSTALL/lvl_rccar.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
+| Table            | Content                                                         |
+| ---------------- | --------------------------------------------------------------- |
 | `lvl_rccar_cars` | Every RC car: owner, name, model, parts, battery, placed or not |
 
 ## Language

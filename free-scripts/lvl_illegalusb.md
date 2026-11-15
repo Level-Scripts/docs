@@ -2,6 +2,32 @@
 description: >-
   Use an illegal USB, pass the hack, drive to the location, take out the armed
   guards and crack the crate for loot.
+icon: usb-drive
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # lvl\_illegalusb
@@ -26,13 +52,13 @@ A short criminal mission in six difficulty colours. The player uses a USB and pa
 
 ## Requirements
 
-| Resource | |
-| --- | --- |
-| [lvl\_core](../lvl_core.md) | required |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required |
-| A hacking minigame | default `mhacking`, change it in `client/editable.lua` |
-| A lockpick minigame | default `t3_lockpick`, change it in `Config.Lockpick` |
-| Framework | any supported by lvl\_core |
+| Resource                                                          |                                                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------ |
+| [lvl\_core](../lvl_core.md)                                       | required                                               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                                               |
+| A hacking minigame                                                | default `mhacking`, change it in `client/editable.lua` |
+| A lockpick minigame                                               | default `t3_lockpick`, change it in `Config.Lockpick`  |
+| Framework                                                         | any supported by lvl\_core                             |
 
 ## Installation
 
@@ -166,10 +192,10 @@ end
 
 ## Items
 
-| Item | Use |
-| --- | --- |
-| `usb_blue`, `usb_green`, `usb_pink`, `usb_purple`, `usb_red`, `usb_yellow` | Start a mission of that tier |
-| `usb_lockpick` | Dropped by a guard, opens the crate |
+| Item                                                                       | Use                                 |
+| -------------------------------------------------------------------------- | ----------------------------------- |
+| `usb_blue`, `usb_green`, `usb_pink`, `usb_purple`, `usb_red`, `usb_yellow` | Start a mission of that tier        |
+| `usb_lockpick`                                                             | Dropped by a guard, opens the crate |
 
 ## Language
 
