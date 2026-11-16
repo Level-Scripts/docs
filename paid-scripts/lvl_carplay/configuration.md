@@ -1,10 +1,8 @@
 # Configuration
 
-## Configuration
-
 All options are in `config.lua`.
 
-### General
+## General
 
 ```lua
 Config.Command = 'carplay'
@@ -13,7 +11,7 @@ Config.Key = 'F7'
 Config.PassengersCanDrive = false   -- passengers can use autopilot and cruise control
 ```
 
-### Music
+## Music
 
 ```lua
 Config.Radio = {
@@ -34,7 +32,7 @@ Config.Radio = {
 }
 ```
 
-### Search keys
+## Search keys
 
 Optional, server side only.
 
@@ -46,7 +44,7 @@ Config.Keys = {
 }
 ```
 
-### Autopilot
+## Autopilot
 
 ```lua
 Config.Autopilot = {
@@ -71,7 +69,7 @@ Config.Autopilot = {
 }
 ```
 
-### Cruise control
+## Cruise control
 
 ```lua
 Config.Cruise = {
@@ -84,7 +82,7 @@ Config.Cruise = {
 }
 ```
 
-### Vehicle
+## Vehicle
 
 ```lua
 Config.Roof = { Enabled = true, MaxSpeed = 40, PassengersCanUse = true }
@@ -99,7 +97,7 @@ Config.Vehicle = {
 }
 ```
 
-### Map and places
+## Map and places
 
 ```lua
 Config.Map = {
@@ -116,7 +114,7 @@ Config.Places = {
 Config.Playlists = { Max = 20, MaxItems = 100 }
 ```
 
-### Radio stations
+## Radio stations
 
 ```lua
 Config.Stations = {
@@ -129,7 +127,7 @@ Config.Stations = {
 
 The order is the menu order. Stations missing in your game build are hidden.
 
-### Other
+## Other
 
 ```lua
 Config.Audio = { XSoundResource = 'xsound', LoadTimeout = 20 }

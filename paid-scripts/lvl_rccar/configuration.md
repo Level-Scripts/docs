@@ -1,7 +1,5 @@
 # Configuration
 
-## Configuration
-
 `config.lua`:
 
 ```lua
@@ -23,7 +21,7 @@ Config.MaxPlaced = 2             -- cars one player can have placed at once
 Config.DefaultName = 'RC Car #%d'
 ```
 
-### Cars
+## Cars
 
 The key is the item name of the car.
 
@@ -44,7 +42,7 @@ Config.Cars = {
 
 To add another RC car, add an entry here and an item with the same name and `client = { export = 'lvl_rccar.placeRCcar' }`.
 
-### Shop
+## Shop
 
 ```lua
 Config.Shop = {

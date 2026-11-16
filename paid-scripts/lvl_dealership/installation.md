@@ -1,7 +1,5 @@
 # Installation
 
-## Installation
-
 1. Put `lvl_dealership` into your resources.
 2. Add it to `server.cfg` after lvl\_core:
 
@@ -12,7 +10,11 @@ ensure lvl_dealership
 
 3. Start the server. All tables are created automatically. On the first start the starter dealerships from `server/starter.lua` are copied into the database once.
 4. Join the game and open `/dealeradmin` to check the dealerships and add vehicles to the catalog.
-5. Optional, for discount vouchers, add the item to `ox_inventory/data/items.lua`:
+5. Optional, for discount vouchers, add the item to your inventory:
+
+{% tabs %}
+{% tab title="ox_inventory" %}
+`ox_inventory/data/items.lua`:
 
 ```lua
 ['discount_code'] = {
@@ -21,6 +23,26 @@ ensure lvl_dealership
     stack = false,
 },
 ```
+{% endtab %}
+
+{% tab title="QBCore inventories" %}
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="ESX (database)" %}
+The ESX default inventory and core\_inventory on ESX read items from the database:
+
+```sql
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('discount_code', 'Discount voucher', 1);
+```
+{% endtab %}
+{% endtabs %}
+
+Copy the images from the `INSTALL` folder into the image folder of your inventory (`ox_inventory/web/images`, `qb-inventory/html/images`...).
 
 6. Connect your car keys and fuel in `Config.OnVehicleSpawned` (see [Hooks](configuration.md#hooks)).
 

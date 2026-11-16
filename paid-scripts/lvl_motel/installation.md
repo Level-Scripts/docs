@@ -1,7 +1,5 @@
 # Installation
 
-## Installation
-
 1. Put `lvl_motel` into your resources.
 2. Add it to `server.cfg` after ox\_inventory and lvl\_core:
 
@@ -11,7 +9,11 @@ ensure lvl_core
 ensure lvl_motel
 ```
 
-3. Add the police item to `ox_inventory/data/items.lua` (also in `INSTALL/ox_item.txt`):
+3. Add the police item to your inventory:
+
+{% tabs %}
+{% tab title="ox_inventory" %}
+`ox_inventory/data/items.lua` (also in `INSTALL/ox_item.txt`):
 
 ```lua
 ['police_ram'] = {
@@ -20,8 +22,30 @@ ensure lvl_motel
     stack = false,
 },
 ```
+{% endtab %}
 
-4. Copy `INSTALL/police_ram.png` to `ox_inventory/web/images/`.
+{% tab title="QBCore inventories" %}
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="ESX (database)" %}
+The ESX default inventory and core\_inventory on ESX read items from the database:
+
+```sql
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('police_ram', 'Police ram', 8);
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+The room stash works best on ox\_inventory.
+{% endhint %}
+
+4. Copy the images from the `INSTALL` folder into the image folder of your inventory (`ox_inventory/web/images`, `qb-inventory/html/images`...).
 5. Give the `police_ram` to your police (armory, shop or job items).
 6. Set motels, prices and room doors in `config/config.lua`.
 7. Start the server. Tables are created automatically. Rooms from the old `motel` tables are copied once.

@@ -1,7 +1,5 @@
 # Installation
 
-## Installation
-
 1. Put `lvl_carplay` into your resources.
 2. Add it to `server.cfg` after xsound and lvl\_core:
 

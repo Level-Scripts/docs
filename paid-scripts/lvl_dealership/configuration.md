@@ -1,10 +1,8 @@
 # Configuration
 
-## Configuration
-
 All options are in `config.lua`. Secrets are in `server/config.lua`.
 
-### General
+## General
 
 ```lua
 Config.Debug = false
@@ -25,7 +23,7 @@ Config.Blips = true            -- map blip for every dealership
 Config.PlateFormat = 'NLLL NNN'   -- L = letter, N = number, other characters are kept, max 8
 ```
 
-### Company vehicles
+## Company vehicles
 
 ```lua
 Config.JobVehicleColumn = nil      -- column in your vehicles table for the job, e.g. 'job'
@@ -35,7 +33,7 @@ Config.CompanyBuyGrades = { 'boss' }   -- grades that may buy cars for the job
 
 Without `JobVehicleColumn` a car bought for the company is saved as a normal owned car.
 
-### Financing
+## Financing
 
 ```lua
 Config.Financing = {
@@ -51,7 +49,7 @@ Config.Financing = {
 
 A financed car cannot be sold back or returned until it is paid off.
 
-### Colours
+## Colours
 
 ```lua
 Config.Colors = {
@@ -68,7 +66,7 @@ Config.Colors = {
 | `gta` | GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet) |
 | `false` | No colour step, the car keeps its default colour |
 
-### Extras
+## Extras
 
 ```lua
 Config.Creator = { enabled = true }    -- Settings page in /dealeradmin
@@ -96,7 +94,7 @@ Config.CheckSpawnPoint = true          -- do not spawn a bought car on a blocked
 Config.ShowroomDistance = 90.0         -- showroom cars exist only this close
 ```
 
-### Test drive
+## Test drive
 
 ```lua
 Config.TestDrive = {
@@ -108,7 +106,7 @@ Config.TestDrive = {
 }
 ```
 
-### Stock orders
+## Stock orders
 
 Only for `owned` dealerships. A car can be ordered when it has a stock number in the catalog (empty stock = unlimited, no ordering).
 
@@ -139,7 +137,7 @@ Config.Orders = {
 
 Set `delivery.from` and `delivery.unload` for each dealership on its Settings page. Without them only Pickup works. Preview the trailer slots in `/dealeradmin`, Tools, Trailer preview.
 
-### Discord logs
+## Discord logs
 
 ```lua
 Config.Webhooks = {
@@ -156,7 +154,7 @@ Where a log goes, first match wins:
 3. `ServerConfig.Webhooks[event]` in `server/config.lua`
 4. `ServerConfig.Webhook` in `server/config.lua`
 
-### server/config.lua
+## server/config.lua
 
 ```lua
 -- a full Discord URL or a key from lvl_core/server/config.lua
