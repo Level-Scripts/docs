@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_evidencebag` into your resources.
-2. Add it to `server.cfg` after your inventory and lvl\_core:
+2. Add it to `server.cfg` after lvl\_core:
 
 ```
-ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
+# your framework and inventory, before lvl_core
 ensure lvl_core
 ensure lvl_evidencebag
 ```
@@ -44,6 +44,8 @@ ensure lvl_evidencebag
     },
 },
 ```
+
+On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_evidencebag.evidence_bag_empty' }`.
 {% endtab %}
 
 {% tab title="QBCore inventories" %}

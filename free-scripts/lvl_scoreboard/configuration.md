@@ -1,10 +1,10 @@
 # Configuration
 
+Framework, inventory and target are set in [lvl\_core configuration](../../lvl_core/configuration.md).
+
 ## config.lua
 
 ```lua
-Config.Framework = 'auto'         -- 'auto' | 'esx' | 'qb' | 'qbx'
-
 Config.PressKey = 'DELETE'        -- default key
 Config.CommandName = 'scoreboard'
 

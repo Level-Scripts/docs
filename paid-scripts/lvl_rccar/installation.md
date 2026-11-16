@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_rccar` into your resources.
-2. Add it to `server.cfg` after your inventory and lvl\_core:
+2. Add it to `server.cfg` after lvl\_core:
 
 ```
-ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
+# your framework and inventory, before lvl_core
 ensure lvl_core
 ensure lvl_rccar
 ```
@@ -65,6 +65,8 @@ ensure lvl_rccar
 ['rc_battery'] = { label = 'RC Battery', weight = 200, stack = false, close = true },
 ['rc_repairkit'] = { label = 'RC Repair Kit', weight = 300, stack = true, close = true },
 ```
+
+On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_rccar.rcbandito' }`.
 {% endtab %}
 
 {% tab title="QBCore inventories" %}

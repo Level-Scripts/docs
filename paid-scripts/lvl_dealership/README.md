@@ -60,6 +60,8 @@ layout:
 | [lvl\_core](../../lvl_core/)                                       | required                                   |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)  | required                                   |
 | [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required                                   |
-| ESX, QBCore or Qbox                                                | detected automatically                     |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory (trunk info only with ox\_inventory) |
 | ox\_target or qb-target                                            | optional, text UI prompts without it       |
-| ox\_inventory                                                      | optional, for trunk info and voucher items |
+
+Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).

@@ -1,11 +1,11 @@
 # Configuration
 
+Framework, inventory and target are set in [lvl\_core configuration](../../lvl_core/configuration.md).
+
 `config.lua`:
 
 ```lua
-Config.Framework = 'auto'   -- 'auto' | 'esx' | 'qb' | 'qbx'
-
--- ox_inventory item names
+-- item names
 Config.Items = {
     controller = 'controller',
     camera     = 'rc_camera',

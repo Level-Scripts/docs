@@ -1,9 +1,10 @@
 # Configuration
 
+Framework, inventory and target are set in [lvl\_core configuration](../../lvl_core/configuration.md).
+
 ## General
 
 ```lua
-Config.Framework = 'auto'   -- 'auto' | 'esx' | 'qb' | 'qbx'
 Config.Webhook = 'motel'    -- key in lvl_core/server/config.lua or a full webhook URL
 
 Config.Interact = 'textui'  -- 'textui' (key at the door) or 'ox_target'

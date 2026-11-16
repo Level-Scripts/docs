@@ -52,6 +52,12 @@ layout:
 | [lvl\_core](../../lvl_core/)                                                  | required               |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required               |
 | [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required               |
-| Inventory | any supported by [lvl\_core](../../lvl_core/) |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory |
 | ox\_target or qb-target                                                       | required               |
-| ESX, QBCore or Qbox                                                           | detected automatically |
+
+Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).
+
+{% hint style="info" %}
+With ox\_inventory the shop is the ox\_inventory shop. Other inventories get a built-in buy menu.
+{% endhint %}

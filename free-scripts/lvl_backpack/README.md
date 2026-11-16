@@ -46,5 +46,11 @@ layout:
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | [lvl\_core](../../lvl_core/)                                      | required                                                                                  |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                                                                                  |
-| An inventory that supports changing slots and weight              | [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) recommended |
-| Framework                                                         | any supported by lvl\_core                                                                |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory |
+
+Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).
+
+{% hint style="info" %}
+Extra slots and weight work only with ox\_inventory. Other inventories keep their own size.
+{% endhint %}

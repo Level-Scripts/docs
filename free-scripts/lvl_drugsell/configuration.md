@@ -56,6 +56,8 @@ Config.Drugs = {
 }
 ```
 
+Item images are picked up automatically from the inventory the server runs.
+
 ## Street NPCs
 
 ```lua

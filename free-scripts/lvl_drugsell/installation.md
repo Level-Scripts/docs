@@ -22,6 +22,8 @@ ensure lvl_drugsell
     close = true,
 },
 ```
+
+On ND Core and ox\_core also add `server = { export = 'lvl_drugsell.drug_machine' }` to the item.
 {% endtab %}
 
 {% tab title="QBCore inventories" %}

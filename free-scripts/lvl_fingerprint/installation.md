@@ -24,6 +24,8 @@ ensure lvl_fingerprint
     close = true,
 },
 ```
+
+On ND Core and ox\_core also add `server = { export = 'lvl_fingerprint.fingerprint' }` to the item.
 {% endtab %}
 
 {% tab title="QBCore inventories" %}

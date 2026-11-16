@@ -49,5 +49,11 @@ layout:
 | ----------------------------------------------------------------------------- | ----------------------------------- |
 | [lvl\_core](../../lvl_core/)                                                  | required                            |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                            |
-| Inventory | any supported by [lvl\_core](../../lvl_core/) |
-| Framework                                                                     | any supported by lvl\_core          |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory |
+
+Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).
+
+{% hint style="info" %}
+Needs an inventory with stashes, not the old framework inventory.
+{% endhint %}

@@ -1,13 +1,12 @@
 # Configuration
 
-All options are in `config.lua`. Secrets are in `server/config.lua`.
+All options are in `config.lua`. Secrets are in `server/config.lua`. Framework, inventory and target are set in [lvl\_core configuration](../../lvl_core/configuration.md).
 
 ## General
 
 ```lua
 Config.Debug = false
 
-Config.Framework = 'auto'      -- 'auto' | 'esx' | 'qb' | 'qbx'
 Config.Interact = 'auto'       -- 'auto' | 'ox_target' | 'qb-target' | 'textui'
 Config.InteractKey = 38        -- E, only for textui
 

@@ -24,6 +24,8 @@ ensure lvl_illegalusb
 ['usb_red']    = { label = 'USB Red',    weight = 10, stack = true, close = true },
 ['usb_yellow'] = { label = 'USB Yellow', weight = 10, stack = true, close = true },
 ```
+
+On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_illegalusb.usb_blue' }`.
 {% endtab %}
 
 {% tab title="QBCore inventories" %}

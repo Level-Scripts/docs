@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_motel` into your resources.
-2. Add it to `server.cfg` after your inventory and lvl\_core:
+2. Add it to `server.cfg` after lvl\_core:
 
 ```
-ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
+# your framework and inventory, before lvl_core
 ensure lvl_core
 ensure lvl_motel
 ```

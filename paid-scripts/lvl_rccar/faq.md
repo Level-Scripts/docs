@@ -4,7 +4,7 @@
 
 <summary>No such export RegisterShop in resource ox_inventory</summary>
 
-ox\_inventory had an error on start, so its shop export was never created. Fix the first ox\_inventory error in the console. lvl\_rccar retries for 30 seconds and registers the shop again when ox\_inventory restarts.
+Only with ox\_inventory. ox\_inventory had an error on start, so its shop export was never created. Fix the first ox\_inventory error in the console. lvl\_rccar retries for 30 seconds and registers the shop again when ox\_inventory restarts.
 
 </details>
 

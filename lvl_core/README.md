@@ -36,7 +36,7 @@ layout:
 
 | Category          | Supported                                                                                                                                                                             | Config            |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Framework         | ESX Legacy, QBCore, Qbox, ND Framework, ox\_core, standalone                                                                                                                          | `Framework`       |
+| Framework         | ESX Legacy, QBCore, Qbox, ND Core, ox\_core, standalone                                                                                                                               | `Framework`       |
 | Inventory         | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory, framework items                         | `Inventory`       |
 | Target            | ox\_target, qb-target, none (text UI prompts)                                                                                                                                         | `Target`          |
 | Notifications     | ox\_lib, okokNotify, brutal\_notify, wasabi\_notify, lation\_ui, codem-notification, mythic\_notify, pNotify, t-notify, k5\_notify, vms\_notify, Qbox, QBCore, ESX, GTA, chat, custom | `Notify.system`   |
