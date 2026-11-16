@@ -23,6 +23,11 @@
   * [Usage](paid-scripts/lvl_rccar/usage.md)
   * [Configuration](paid-scripts/lvl_rccar/configuration.md)
   * [FAQ](paid-scripts/lvl_rccar/faq.md)
+* [lvl\_carplay](paid-scripts/lvl_carplay/README.md)
+  * [Installation](paid-scripts/lvl_carplay/installation.md)
+  * [Usage](paid-scripts/lvl_carplay/usage.md)
+  * [Configuration](paid-scripts/lvl_carplay/configuration.md)
+  * [FAQ](paid-scripts/lvl_carplay/faq.md)
 
 ## Free scripts
 
@@ -33,6 +38,7 @@
   * [FAQ](free-scripts/lvl_scoreboard/faq.md)
 * [lvl\_backpack](free-scripts/lvl_backpack/README.md)
   * [Installation](free-scripts/lvl_backpack/installation.md)
+  * [Usage](free-scripts/lvl_backpack/usage.md)
   * [Configuration](free-scripts/lvl_backpack/configuration.md)
   * [FAQ](free-scripts/lvl_backpack/faq.md)
 * [lvl\_drugsell](free-scripts/lvl_drugsell/README.md)
