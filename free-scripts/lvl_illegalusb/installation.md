@@ -27,7 +27,7 @@ ensure lvl_illegalusb
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format). Also in `INSTALL/qb_items.txt`:
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format). Also in `INSTALL/qb_items.txt`:
 
 ```lua
 ['usb_lockpick'] = { name = 'usb_lockpick', label = 'Lockpick', weight = 160, type = 'item', image = 'usb_lockpick.png', unique = false, useable = false, shouldClose = true, description = '' },
@@ -42,7 +42,7 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES

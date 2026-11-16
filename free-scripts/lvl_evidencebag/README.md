@@ -49,5 +49,5 @@ layout:
 | ----------------------------------------------------------------------------- | ----------------------------------- |
 | [lvl\_core](../../lvl_core/)                                                  | required                            |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                            |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stashes and item buttons) |
+| Inventory | any supported by [lvl\_core](../../lvl_core/) |
 | Framework                                                                     | any supported by lvl\_core          |

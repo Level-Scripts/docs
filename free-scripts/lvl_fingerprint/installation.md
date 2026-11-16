@@ -27,7 +27,7 @@ ensure lvl_fingerprint
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
 
 ```lua
 ['fingerprint'] = { name = 'fingerprint', label = 'Fingerprint Scanner', weight = 300, type = 'item', image = 'fingerprint.png', unique = true, useable = true, shouldClose = true, description = '' },
@@ -35,7 +35,7 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('fingerprint', 'Fingerprint Scanner', 1);

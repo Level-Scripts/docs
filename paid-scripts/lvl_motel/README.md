@@ -54,6 +54,6 @@ layout:
 | [lvl\_core](../../lvl_core/)                                                  | required                   |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                   |
 | [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required                   |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required (stash)           |
+| Inventory | any supported by [lvl\_core](../../lvl_core/) |
 | ESX, QBCore or Qbox                                                           | detected automatically     |
 | illenium-appearance, qb-clothing or esx\_skin                                 | optional, for the wardrobe |

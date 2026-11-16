@@ -25,7 +25,7 @@ ensure lvl_drugsell
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format). Also in `INSTALL/qb_item.txt`:
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format). Also in `INSTALL/qb_item.txt`:
 
 ```lua
 ['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
@@ -33,7 +33,7 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('drug_machine', 'Vending machine', 25);

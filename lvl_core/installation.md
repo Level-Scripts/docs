@@ -6,7 +6,7 @@
 ```
 ensure ox_lib
 ensure es_extended      # or qb-core / qbx_core / ND_Core / ox_core
-ensure ox_inventory     # your inventory
+ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
 ensure ox_target        # your target
 ensure lvl_core
 ensure lvl_dealership   # your lvl scripts

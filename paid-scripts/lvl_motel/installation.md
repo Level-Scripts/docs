@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_motel` into your resources.
-2. Add it to `server.cfg` after ox\_inventory and lvl\_core:
+2. Add it to `server.cfg` after your inventory and lvl\_core:
 
 ```
-ensure ox_inventory
+ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
 ensure lvl_core
 ensure lvl_motel
 ```
@@ -25,7 +25,7 @@ ensure lvl_motel
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
 
 ```lua
 ['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
@@ -33,17 +33,13 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('police_ram', 'Police ram', 8);
 ```
 {% endtab %}
 {% endtabs %}
-
-{% hint style="info" %}
-The room stash works best on ox\_inventory.
-{% endhint %}
 
 4. Copy the images from the `INSTALL` folder into the image folder of your inventory (`ox_inventory/web/images`, `qb-inventory/html/images`...).
 5. Give the `police_ram` to your police (armory, shop or job items).

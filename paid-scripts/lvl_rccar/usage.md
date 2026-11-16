@@ -22,8 +22,12 @@ Leaving the signal range or an empty battery disconnects you.
 | Item | Use |
 | --- | --- |
 | `rcbandito` | The RC car, keeps its name, parts and battery in the item |
+| `rcminitank` | RC tank |
+| `rc_drone` | Drone |
+| `rc_policedrone` | Police drone with thermal camera and spotlight |
 | `controller` | Opens the list of your placed cars |
 | `rc_camera` | Installs the camera |
 | `rc_microphone` | Installs the microphone |
 | `rc_antenna` | Installs the antenna |
 | `rc_battery` | Swaps the battery, keeps its own charge |
+| `rc_repairkit` | RC repair kit |

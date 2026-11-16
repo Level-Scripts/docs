@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_rccar` into your resources.
-2. Add it to `server.cfg` after ox\_inventory and lvl\_core:
+2. Add it to `server.cfg` after your inventory and lvl\_core:
 
 ```
-ensure ox_inventory
+ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
 ensure lvl_core
 ensure lvl_rccar
 ```
@@ -68,7 +68,7 @@ ensure lvl_rccar
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
 
 ```lua
 ['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
@@ -85,7 +85,7 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES

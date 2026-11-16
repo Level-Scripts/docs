@@ -1,10 +1,10 @@
 # Installation
 
 1. Put `lvl_evidencebag` into your resources.
-2. Add it to `server.cfg` after ox\_inventory and lvl\_core:
+2. Add it to `server.cfg` after your inventory and lvl\_core:
 
 ```
-ensure ox_inventory
+ensure your_inventory   # ox_inventory, qs-inventory, qb-inventory...
 ensure lvl_core
 ensure lvl_evidencebag
 ```
@@ -47,7 +47,7 @@ ensure lvl_evidencebag
 {% endtab %}
 
 {% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory and origen\_inventory add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
 
 ```lua
 ['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
@@ -56,7 +56,7 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 {% endtab %}
 
 {% tab title="ESX (database)" %}
-The ESX default inventory and core\_inventory on ESX read items from the database:
+The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES

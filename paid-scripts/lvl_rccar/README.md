@@ -52,6 +52,6 @@ layout:
 | [lvl\_core](../../lvl_core/)                                                  | required               |
 | [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required               |
 | [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required               |
-| [ox\_inventory](https://github.com/overextended/ox_inventory/releases/latest) | required               |
+| Inventory | any supported by [lvl\_core](../../lvl_core/) |
 | ox\_target or qb-target                                                       | required               |
 | ESX, QBCore or Qbox                                                           | detected automatically |
