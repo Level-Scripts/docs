@@ -68,7 +68,5 @@ Set `Config.Shop = false` to sell the items in another shop.
 
 Client exports used by the items:
 
-| Export | |
-| --- | --- |
-| `exports.lvl_rccar:placeRCcar(data, slot)` | Places the RC car from the used item |
-| `exports.lvl_rccar:useController()` | Opens the controller |
+* `exports.lvl_rccar:placeRCcar(data, slot)`: Places the RC car from the used item
+* `exports.lvl_rccar:useController()`: Opens the controller

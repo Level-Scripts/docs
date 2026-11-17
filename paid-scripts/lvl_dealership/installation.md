@@ -25,16 +25,72 @@ ensure lvl_dealership
 ```
 {% endtab %}
 
-{% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+{% tab title="qb-inventory" %}
+`qb-core/shared/items.lua`:
 
 ```lua
 ['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
 ```
 {% endtab %}
 
-{% tab title="ESX (database)" %}
-The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
+{% tab title="ps-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="lj-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="qs-inventory" %}
+`qs-inventory/shared/items.lua`:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="codem-inventory" %}
+Add it to the item list of codem-inventory (see its documentation), same format as QBCore:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="core_inventory" %}
+core\_inventory reads items from your framework: on ESX use the SQL below, on QBCore add it to `qb-core/shared/items.lua`.
+
+```sql
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('discount_code', 'Discount voucher', 1);
+```
+{% endtab %}
+
+{% tab title="tgiann-inventory" %}
+Add it to the item list of tgiann-inventory (see its documentation), same format as QBCore:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="origen_inventory" %}
+Add it to the item list of origen\_inventory (see its documentation), same format as QBCore:
+
+```lua
+['discount_code'] = { name = 'discount_code', label = 'Discount voucher', weight = 10, type = 'item', image = 'discount_code.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="framework" %}
+Old ESX inventory: the SQL below. Old QBCore inventory: `qb-core/shared/items.lua`.
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('discount_code', 'Discount voucher', 1);
@@ -54,18 +110,16 @@ Coming from v1? Data from the old tables (vehicles, categories, showroom, codes,
 
 Created automatically. `INSTALL/lvl_dealership.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_dealership_locations` | Dealerships |
-| `lvl_dealership_vehicles` | Catalog |
-| `lvl_dealership_categories` | Categories |
-| `lvl_dealership_showroom` | Showroom cars |
-| `lvl_dealership_codes` | Discount codes |
-| `lvl_dealership_finance` | Loans |
-| `lvl_dealership_sales` | Sales log |
-| `lvl_dealership_orders` | Stock orders |
-| `lvl_dealership_transactions` | Company transactions |
-| `lvl_dealership_settings` | Name and logo per dealership |
-| `lvl_dealership_webhooks` | Webhooks per dealership and event |
+* `lvl_dealership_locations`: Dealerships
+* `lvl_dealership_vehicles`: Catalog
+* `lvl_dealership_categories`: Categories
+* `lvl_dealership_showroom`: Showroom cars
+* `lvl_dealership_codes`: Discount codes
+* `lvl_dealership_finance`: Loans
+* `lvl_dealership_sales`: Sales log
+* `lvl_dealership_orders`: Stock orders
+* `lvl_dealership_transactions`: Company transactions
+* `lvl_dealership_settings`: Name and logo per dealership
+* `lvl_dealership_webhooks`: Webhooks per dealership and event
 
 Bought vehicles are saved to the vehicles table of your framework (`owned_vehicles` on ESX, `player_vehicles` on QBCore and Qbox).

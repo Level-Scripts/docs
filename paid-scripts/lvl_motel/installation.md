@@ -24,19 +24,67 @@ ensure lvl_motel
 ```
 {% endtab %}
 
-{% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+{% tab title="qb-inventory" %}
+`qb-core/shared/items.lua`:
 
 ```lua
 ['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
 ```
 {% endtab %}
 
-{% tab title="ESX (database)" %}
-The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
+{% tab title="ps-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="lj-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="qs-inventory" %}
+`qs-inventory/shared/items.lua`:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="codem-inventory" %}
+Add it to the item list of codem-inventory (see its documentation), same format as QBCore:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="core_inventory" %}
+core\_inventory reads items from your framework: on ESX use the SQL below, on QBCore add it to `qb-core/shared/items.lua`.
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('police_ram', 'Police ram', 8);
+```
+{% endtab %}
+
+{% tab title="tgiann-inventory" %}
+Add it to the item list of tgiann-inventory (see its documentation), same format as QBCore:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="origen_inventory" %}
+Add it to the item list of origen\_inventory (see its documentation), same format as QBCore:
+
+```lua
+['police_ram'] = { name = 'police_ram', label = 'Police ram', weight = 8000, type = 'item', image = 'police_ram.png', unique = true, useable = false, shouldClose = true, description = '' },
 ```
 {% endtab %}
 {% endtabs %}
@@ -50,10 +98,8 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('police_ram', 'Police ra
 
 Created automatically. `INSTALL/lvl_motel.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_motel_rooms` | Rented rooms, tenant, rent end, lock and seal |
-| `lvl_motel_keys` | Key holders and their permissions |
-| `lvl_motel_inside` | Players who were inside a room when they left |
+* `lvl_motel_rooms`: Rented rooms, tenant, rent end, lock and seal
+* `lvl_motel_keys`: Key holders and their permissions
+* `lvl_motel_inside`: Players who were inside a room when they left
 
 The old tables `motel`, `motel_key` and `motel_inside` from v1 are copied once and can be deleted after that.

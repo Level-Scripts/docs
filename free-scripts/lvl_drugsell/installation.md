@@ -23,19 +23,75 @@ ensure lvl_drugsell
 },
 ```
 
-On ND Core and ox\_core also add `server = { export = 'lvl_drugsell.drug_machine' }` to the item.
+On ND Core and ox\_core also add `server = { export = 'lvl_drugsell.drug_machine' }` to the item. With qs-inventory it works without it. Other inventories on ND Core and ox\_core are not supported for usable items (warning in the console).
 {% endtab %}
 
-{% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add it to `qb-core/shared/items.lua` (or the items file of your inventory, same format). Also in `INSTALL/qb_item.txt`:
+{% tab title="qb-inventory" %}
+`qb-core/shared/items.lua` (also in `INSTALL/qb_item.txt`):
 
 ```lua
 ['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
 ```
 {% endtab %}
 
-{% tab title="ESX (database)" %}
-The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
+{% tab title="ps-inventory" %}
+`qb-core/shared/items.lua` (also in `INSTALL/qb_item.txt`):
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="lj-inventory" %}
+`qb-core/shared/items.lua` (also in `INSTALL/qb_item.txt`):
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="qs-inventory" %}
+`qs-inventory/shared/items.lua`:
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="codem-inventory" %}
+Add it to the item list of codem-inventory (see its documentation), same format as QBCore:
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="core_inventory" %}
+core\_inventory reads items from your framework: on ESX use the SQL below, on QBCore add it to `qb-core/shared/items.lua`.
+
+```sql
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('drug_machine', 'Vending machine', 25);
+```
+{% endtab %}
+
+{% tab title="tgiann-inventory" %}
+Add it to the item list of tgiann-inventory (see its documentation), same format as QBCore:
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="origen_inventory" %}
+Add it to the item list of origen\_inventory (see its documentation), same format as QBCore:
+
+```lua
+['drug_machine'] = { name = 'drug_machine', label = 'Vending machine', weight = 25000, type = 'item', image = 'drug_machine.png', unique = true, useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="framework" %}
+Old ESX inventory: the SQL below. Old QBCore inventory: `qb-core/shared/items.lua`.
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('drug_machine', 'Vending machine', 25);
@@ -54,7 +110,5 @@ Copy the images from the `INSTALL` folder into the image folder of your inventor
 
 Created automatically. `INSTALL/lvl_drugsell.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_drugsell_levels` | XP and level per character |
-| `lvl_drugsell_machines` | Placed machines, owner, stock and money |
+* `lvl_drugsell_levels`: XP and level per character
+* `lvl_drugsell_machines`: Placed machines, owner, stock and money

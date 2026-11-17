@@ -124,6 +124,4 @@ Keep webhook URLs here, never in a `config.lua`. Players can download every `con
 
 ## Commands
 
-| Command    | Who                    | What it does                   |
-| ---------- | ---------------------- | ------------------------------ |
-| `/lvlcore` | server console, admins | Prints what lvl\_core detected |
+* `/lvlcore` (server console, admins): Prints what lvl\_core detected

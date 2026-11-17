@@ -49,9 +49,7 @@ layout:
 
 ## Requirements
 
-| Resource                                                          |                                  |
-| ----------------------------------------------------------------- | -------------------------------- |
-| [lvl\_core](../../lvl_core/)                                      | required                         |
-| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required                         |
-| [xsound](https://github.com/Xogy/xsound)                          | required, plays the music        |
-| Framework                                                         | not needed, standalone           |
+* [lvl\_core](../../lvl_core/): required
+* [ox\_lib](https://github.com/overextended/ox_lib/releases/latest): required
+* [xsound](https://github.com/Xogy/xsound): required, plays the music
+* Framework: not needed, standalone

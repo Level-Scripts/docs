@@ -58,12 +58,10 @@ Config.Colors = {
 }
 ```
 
-| Mode | Result |
-| --- | --- |
-| `rgb` | Full colour picker |
-| `palette` | Only your colours from `palette` |
-| `gta` | GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet) |
-| `false` | No colour step, the car keeps its default colour |
+* `rgb`: Full colour picker
+* `palette`: Only your colours from `palette`
+* `gta`: GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet)
+* `false`: No colour step, the car keeps its default colour
 
 ## Extras
 
@@ -92,6 +90,25 @@ Config.DiscountItem = 'discount_code'  -- voucher item, the code is in its metad
 Config.CheckSpawnPoint = true          -- do not spawn a bought car on a blocked spot
 Config.ShowroomDistance = 90.0         -- showroom cars exist only this close
 ```
+
+## Storage
+
+Trunk and glovebox size shown in the catalog.
+
+```lua
+-- { slots, weight in kg } per GTA vehicle class
+Config.Storage = {
+    trunk = {
+        [0] = { 21, 42 }, [1] = { 41, 82 }, [2] = { 51, 102 }, [3] = { 31, 62 }, [4] = { 41, 82 },
+        [8] = { 5, 10 }, [9] = { 51, 102 }, ...
+    },
+    glovebox = {
+        [0] = { 11, 11 }, [1] = { 11, 11 }, ...
+    },
+}
+```
+
+With ox\_inventory the sizes are read from `ox_inventory/data/vehicles.lua`, with other inventories from `Config.Storage`. A size set for a vehicle in `/dealeradmin` always wins. `Config.Storage = false` hides it.
 
 ## Test drive
 

@@ -45,11 +45,11 @@ ensure lvl_evidencebag
 },
 ```
 
-On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_evidencebag.evidence_bag_empty' }`.
+On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_evidencebag.evidence_bag_empty' }`. With qs-inventory it works without it. Other inventories on ND Core and ox\_core are not supported for usable items (warning in the console).
 {% endtab %}
 
-{% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+{% tab title="qb-inventory" %}
+`qb-core/shared/items.lua`:
 
 ```lua
 ['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
@@ -57,8 +57,44 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 ```
 {% endtab %}
 
-{% tab title="ESX (database)" %}
-The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
+{% tab title="ps-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="lj-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="qs-inventory" %}
+`qs-inventory/shared/items.lua`:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="codem-inventory" %}
+Add them to the item list of codem-inventory (see its documentation), same format as QBCore:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="core_inventory" %}
+core\_inventory reads items from your framework: on ESX use the SQL below, on QBCore add them to `qb-core/shared/items.lua`.
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES
@@ -66,11 +102,25 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
     ('evidence_bag_full', 'Evidence Bag', 1);
 ```
 {% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
-Opening the bag as a stash and the **Set label** and **Unpack** buttons work best on ox\_inventory.
-{% endhint %}
+{% tab title="tgiann-inventory" %}
+Add them to the item list of tgiann-inventory (see its documentation), same format as QBCore:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="origen_inventory" %}
+Add them to the item list of origen\_inventory (see its documentation), same format as QBCore:
+
+```lua
+['evidence_bag_empty'] = { name = 'evidence_bag_empty', label = 'Empty Evidence Bag', weight = 100, type = 'item', image = 'evidence_bag_empty.png', unique = false, useable = true, shouldClose = true, description = '' },
+['evidence_bag_full']  = { name = 'evidence_bag_full',  label = 'Evidence Bag',       weight = 0,   type = 'item', image = 'evidence_bag_full.png',  unique = true,  useable = true, shouldClose = true, description = '' },
+```
+{% endtab %}
+{% endtabs %}
 
 Copy the images from the `INSTALL` folder into the image folder of your inventory (`ox_inventory/web/images`, `qb-inventory/html/images`...).
 

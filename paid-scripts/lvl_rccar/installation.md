@@ -66,11 +66,11 @@ ensure lvl_rccar
 ['rc_repairkit'] = { label = 'RC Repair Kit', weight = 300, stack = true, close = true },
 ```
 
-On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_rccar.rcbandito' }`.
+On ND Core and ox\_core also add `server = { export = '<resource>.<item>' }` to every usable item, for example `server = { export = 'lvl_rccar.rcbandito' }`. With qs-inventory it works without it. Other inventories on ND Core and ox\_core are not supported for usable items (warning in the console).
 {% endtab %}
 
-{% tab title="QBCore inventories" %}
-For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgiann-inventory, origen\_inventory, core\_inventory on QBCore and `framework` on QBCore add them to `qb-core/shared/items.lua` (or the items file of your inventory, same format):
+{% tab title="qb-inventory" %}
+`qb-core/shared/items.lua`:
 
 ```lua
 ['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
@@ -86,8 +86,128 @@ For qb-inventory, ps-inventory, lj-inventory, qs-inventory, codem-inventory, tgi
 ```
 {% endtab %}
 
-{% tab title="ESX (database)" %}
-The ESX default inventory (`framework`) and core\_inventory on ESX read items from the database:
+{% tab title="ps-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="lj-inventory" %}
+`qb-core/shared/items.lua`:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="qs-inventory" %}
+`qs-inventory/shared/items.lua`:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="codem-inventory" %}
+Add them to the item list of codem-inventory (see its documentation), same format as QBCore:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="core_inventory" %}
+core\_inventory reads items from your framework: on ESX use the SQL below, on QBCore add them to `qb-core/shared/items.lua`.
+
+```sql
+INSERT INTO `items` (`name`, `label`, `weight`) VALUES
+    ('rcbandito', 'RC Bandito', 2),
+    ('rcminitank', 'RC Tank', 3),
+    ('rc_drone', 'Drone', 2),
+    ('rc_policedrone', 'Police Drone', 2),
+    ('controller', 'RC Controller', 1),
+    ('rc_camera', 'RC Camera', 1),
+    ('rc_microphone', 'RC Microphone', 1),
+    ('rc_antenna', 'RC Antenna', 1),
+    ('rc_battery', 'RC Battery', 1),
+    ('rc_repairkit', 'RC Repair Kit', 1);
+```
+{% endtab %}
+
+{% tab title="tgiann-inventory" %}
+Add them to the item list of tgiann-inventory (see its documentation), same format as QBCore:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="origen_inventory" %}
+Add them to the item list of origen\_inventory (see its documentation), same format as QBCore:
+
+```lua
+['rcbandito']      = { name = 'rcbandito',      label = 'RC Bandito',    weight = 1500, type = 'item', image = 'rcbandito.png',      unique = true,  useable = true,  shouldClose = true, description = 'Remote controlled car' },
+['rcminitank']     = { name = 'rcminitank',     label = 'RC Tank',       weight = 2500, type = 'item', image = 'rcminitank.png',     unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_drone']       = { name = 'rc_drone',       label = 'Drone',         weight = 1200, type = 'item', image = 'rc_drone.png',       unique = true,  useable = true,  shouldClose = true, description = '' },
+['rc_policedrone'] = { name = 'rc_policedrone', label = 'Police Drone',  weight = 1500, type = 'item', image = 'rc_policedrone.png', unique = true,  useable = true,  shouldClose = true, description = 'Police drone with thermal camera and spotlight' },
+['controller']     = { name = 'controller',     label = 'RC Controller', weight = 300,  type = 'item', image = 'controller.png',     unique = true,  useable = true,  shouldClose = true, description = 'Drive your placed RC cars' },
+['rc_camera']      = { name = 'rc_camera',      label = 'RC Camera',     weight = 100,  type = 'item', image = 'rc_camera.png',      unique = false, useable = false, shouldClose = true, description = '' },
+['rc_microphone']  = { name = 'rc_microphone',  label = 'RC Microphone', weight = 50,   type = 'item', image = 'rc_microphone.png',  unique = false, useable = false, shouldClose = true, description = '' },
+['rc_antenna']     = { name = 'rc_antenna',     label = 'RC Antenna',    weight = 80,   type = 'item', image = 'rc_antenna.png',     unique = false, useable = false, shouldClose = true, description = '' },
+['rc_battery']     = { name = 'rc_battery',     label = 'RC Battery',    weight = 200,  type = 'item', image = 'rc_battery.png',     unique = true,  useable = false, shouldClose = true, description = '' },
+['rc_repairkit']   = { name = 'rc_repairkit',   label = 'RC Repair Kit', weight = 300,  type = 'item', image = 'rc_repairkit.png',   unique = false, useable = false, shouldClose = true, description = '' },
+```
+{% endtab %}
+
+{% tab title="framework" %}
+Old ESX inventory: the SQL below. Old QBCore inventory: `qb-core/shared/items.lua`.
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES
@@ -112,6 +232,4 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
 
 Created automatically. `INSTALL/lvl_rccar.sql` only if your database user cannot create tables.
 
-| Table | Content |
-| --- | --- |
-| `lvl_rccar_cars` | Every RC car: owner, name, model, parts, battery, placed or not |
+* `lvl_rccar_cars`: Every RC car: owner, name, model, parts, battery, placed or not

@@ -21,12 +21,10 @@ Config.ClothesBackpacks = {
 }
 ```
 
-| Field | Meaning |
-| --- | --- |
-| `component` | Clothing slot: `5` = bags, `4` = legs, `11` = torso... |
-| `drawable` | Number of the clothing piece in that slot |
-| `slots` | Slots added |
-| `weight` | Grams added |
+* `component`: Clothing slot: `5` = bags, `4` = legs, `11` = torso...
+* `drawable`: Number of the clothing piece in that slot
+* `slots`: Slots added
+* `weight`: Grams added
 
 {% hint style="info" %}
 Set `DefaultInventory` to the same size your inventory uses for players (for ox\_inventory `inventory:slots` and `inventory:weight`), otherwise players without a bag get a different size.

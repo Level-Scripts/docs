@@ -138,12 +138,10 @@ Config.Streamer = { VolumeCommand = 'carvolume' }
 
 Client exports:
 
-| Export | |
-| --- | --- |
-| `exports.lvl_carplay:isCruiseActive()` | Is cruise control on |
-| `exports.lvl_carplay:getStreamerMode()` | Is streamer mode on |
-| `exports.lvl_carplay:setStreamerMode(state)` | Turns streamer mode on or off |
-| `exports.lvl_carplay:getPersonalVolume()` | Personal car music volume |
-| `exports.lvl_carplay:setPersonalVolume(volume)` | Sets the personal car music volume |
+* `exports.lvl_carplay:isCruiseActive()`: Is cruise control on
+* `exports.lvl_carplay:getStreamerMode()`: Is streamer mode on
+* `exports.lvl_carplay:setStreamerMode(state)`: Turns streamer mode on or off
+* `exports.lvl_carplay:getPersonalVolume()`: Personal car music volume
+* `exports.lvl_carplay:setPersonalVolume(volume)`: Sets the personal car music volume
 
 Client event `lvl_carplay:cruise` fires when cruise control turns on or off (for HUDs).
