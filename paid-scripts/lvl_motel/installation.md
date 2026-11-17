@@ -98,8 +98,10 @@ Add it to the item list of origen\_inventory (see its documentation), same forma
 
 Created automatically. `INSTALL/lvl_motel.sql` only if your database user cannot create tables.
 
-* `lvl_motel_rooms`: Rented rooms, tenant, rent end, lock and seal
-* `lvl_motel_keys`: Key holders and their permissions
-* `lvl_motel_inside`: Players who were inside a room when they left
+| Table | Content |
+| --- | --- |
+| `lvl_motel_rooms` | Rented rooms, tenant, rent end, lock and seal |
+| `lvl_motel_keys` | Key holders and their permissions |
+| `lvl_motel_inside` | Players who were inside a room when they left |
 
 The old tables `motel`, `motel_key` and `motel_inside` from v1 are copied once and can be deleted after that.

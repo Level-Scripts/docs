@@ -46,10 +46,12 @@ layout:
 
 ## Requirements
 
-* [lvl\_core](../../lvl_core/): required
-* [ox\_lib](https://github.com/overextended/ox_lib/releases/latest): required
-* [oxmysql](https://github.com/overextended/oxmysql/releases/latest): required
-* Framework: ESX Legacy, QBCore, Qbox, ND Core, ox\_core
-* Inventory: ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory (drug variants and machine stock use item metadata)
+| Resource                                                           |                                                                                                                                               |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [lvl\_core](../../lvl_core/)                                       | required                                                                                                                                      |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)  | required                                                                                                                                      |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest) | required                                                                                                                                      |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory (drug variants and machine stock use item metadata) |
 
 Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).

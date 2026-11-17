@@ -110,16 +110,18 @@ Coming from v1? Data from the old tables (vehicles, categories, showroom, codes,
 
 Created automatically. `INSTALL/lvl_dealership.sql` only if your database user cannot create tables.
 
-* `lvl_dealership_locations`: Dealerships
-* `lvl_dealership_vehicles`: Catalog
-* `lvl_dealership_categories`: Categories
-* `lvl_dealership_showroom`: Showroom cars
-* `lvl_dealership_codes`: Discount codes
-* `lvl_dealership_finance`: Loans
-* `lvl_dealership_sales`: Sales log
-* `lvl_dealership_orders`: Stock orders
-* `lvl_dealership_transactions`: Company transactions
-* `lvl_dealership_settings`: Name and logo per dealership
-* `lvl_dealership_webhooks`: Webhooks per dealership and event
+| Table | Content |
+| --- | --- |
+| `lvl_dealership_locations` | Dealerships |
+| `lvl_dealership_vehicles` | Catalog |
+| `lvl_dealership_categories` | Categories |
+| `lvl_dealership_showroom` | Showroom cars |
+| `lvl_dealership_codes` | Discount codes |
+| `lvl_dealership_finance` | Loans |
+| `lvl_dealership_sales` | Sales log |
+| `lvl_dealership_orders` | Stock orders |
+| `lvl_dealership_transactions` | Company transactions |
+| `lvl_dealership_settings` | Name and logo per dealership |
+| `lvl_dealership_webhooks` | Webhooks per dealership and event |
 
-Bought vehicles are saved to the vehicles table of your framework (`owned_vehicles` on ESX, `player_vehicles` on QBCore and Qbox).
+Bought vehicles are saved to the vehicles table of your framework (`owned_vehicles` on ESX, `player_vehicles` on QBCore and Qbox, the vehicle table of the framework on ND Core and ox\_core).

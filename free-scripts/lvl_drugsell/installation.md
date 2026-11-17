@@ -110,5 +110,7 @@ Copy the images from the `INSTALL` folder into the image folder of your inventor
 
 Created automatically. `INSTALL/lvl_drugsell.sql` only if your database user cannot create tables.
 
-* `lvl_drugsell_levels`: XP and level per character
-* `lvl_drugsell_machines`: Placed machines, owner, stock and money
+| Table | Content |
+| --- | --- |
+| `lvl_drugsell_levels` | XP and level per character |
+| `lvl_drugsell_machines` | Placed machines, owner, stock and money |

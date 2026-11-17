@@ -49,12 +49,14 @@ layout:
 
 ## Requirements
 
-* [lvl\_core](../../lvl_core/): required
-* [ox\_lib](https://github.com/overextended/ox_lib/releases/latest): required
-* [oxmysql](https://github.com/overextended/oxmysql/releases/latest): required
-* Framework: ESX Legacy, QBCore, Qbox, ND Core, ox\_core
-* Inventory: ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory
-* illenium-appearance, qb-clothing or esx\_skin: optional, for the wardrobe
+| Resource                                                                      |                            |
+| ----------------------------------------------------------------------------- | -------------------------- |
+| [lvl\_core](../../lvl_core/)                                                  | required                   |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest)             | required                   |
+| [oxmysql](https://github.com/overextended/oxmysql/releases/latest)            | required                   |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core |
+| Inventory | ox\_inventory, qs-inventory, codem-inventory, core\_inventory, tgiann-inventory, origen\_inventory, qb-inventory, ps-inventory, lj-inventory or your framework's own inventory |
+| illenium-appearance, qb-clothing or esx\_skin                                 | optional, for the wardrobe |
 
 Framework and inventory are detected automatically, you can set them in [lvl\_core configuration](../../lvl_core/configuration.md).
 

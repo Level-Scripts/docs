@@ -11,5 +11,7 @@ If the time runs out, the mission ends.
 
 ## Items
 
-* `usb_blue`, `usb_green`, `usb_pink`, `usb_purple`, `usb_red`, `usb_yellow`: Start a mission of that tier
-* `usb_lockpick`: Dropped by a guard, opens the crate
+| Item | Use |
+| --- | --- |
+| `usb_blue`, `usb_green`, `usb_pink`, `usb_purple`, `usb_red`, `usb_yellow` | Start a mission of that tier |
+| `usb_lockpick` | Dropped by a guard, opens the crate |

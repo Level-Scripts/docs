@@ -14,14 +14,18 @@ Go to **James** (the middleman), choose **Start looking**. After a while he find
 
 Use the `drug_machine` item and place it:
 
-* Arrows: Move
-* Mouse wheel: Rotate
-* `E`: Place
-* `X`: Cancel
+| Key | Action |
+| --- | --- |
+| Arrows | Move |
+| Mouse wheel | Rotate |
+| `E` | Place |
+| `X` | Cancel |
 
 The owner manages the machine (restock, change names and prices, withdraw money, pick it up). Other players buy from it with cash or bank. Picking up the machine returns the drugs, the money and the machine item.
 
 ## Items
 
-* `drug_machine`: Places a vending machine
-* your drug items: Everything in `Config.Drugs`
+| Item | Use |
+| --- | --- |
+| `drug_machine` | Places a vending machine |
+| your drug items | Everything in `Config.Drugs` |

@@ -46,8 +46,10 @@ layout:
 
 ## Requirements
 
-* [lvl\_core](../../lvl_core/): required
-* [ox\_lib](https://github.com/overextended/ox_lib/releases/latest): required
-* Framework: ESX Legacy, QBCore, Qbox, ND Core, ox\_core or standalone
+| Resource                                                          |                        |
+| ----------------------------------------------------------------- | ---------------------- |
+| [lvl\_core](../../lvl_core/)                                      | required               |
+| [ox\_lib](https://github.com/overextended/ox_lib/releases/latest) | required               |
+| Framework | ESX Legacy, QBCore, Qbox, ND Core, ox\_core or standalone |
 
 The framework is detected automatically, you can set it in [lvl\_core configuration](../../lvl_core/configuration.md).

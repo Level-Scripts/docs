@@ -58,10 +58,12 @@ Config.Colors = {
 }
 ```
 
-* `rgb`: Full colour picker
-* `palette`: Only your colours from `palette`
-* `gta`: GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet)
-* `false`: No colour step, the car keeps its default colour
+| Mode | Result |
+| --- | --- |
+| `rgb` | Full colour picker |
+| `palette` | Only your colours from `palette` |
+| `gta` | GTA paints from `gta` (`id` = paint index, `hex` = swatch colour in the tablet) |
+| `false` | No colour step, the car keeps its default colour |
 
 ## Extras
 

@@ -232,4 +232,6 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
 
 Created automatically. `INSTALL/lvl_rccar.sql` only if your database user cannot create tables.
 
-* `lvl_rccar_cars`: Every RC car: owner, name, model, parts, battery, placed or not
+| Table | Content |
+| --- | --- |
+| `lvl_rccar_cars` | Every RC car: owner, name, model, parts, battery, placed or not |
